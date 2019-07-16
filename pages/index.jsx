@@ -14,6 +14,7 @@ class Home extends Component {
             <div>
                 <Head>
                     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" />
+                    <title>JavaScript Calculator</title>
                 </Head>
                 <h1>JavaScript Calculator</h1>
                 <Provider store={store}>
