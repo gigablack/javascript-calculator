@@ -16,8 +16,8 @@ class Screen extends Component {
                 <style jsx>
                     {`
                     div {
-                        background-color: var(--registration-black);
-                        color: var(--platinum);
+                        background-color: #000000;
+                        color: #eee5e9;
                         flex-grow: 1;
                         flex-shrink: 2;
                         flex-basis: 1;

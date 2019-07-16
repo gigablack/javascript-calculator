@@ -16,15 +16,20 @@ class Calculator extends Component {
                 <style jsx>
                     {`
                     div {
-                        background-color: var(--platinum);
+                        background-color: #eee5e9;
                         height: 400px;
                         width: 35%;
                         margin: auto;
                         border-radius: 10px;
-                        box-shadow: 5px 5px 5px var(--registration-black);
+                        box-shadow: 5px 5px 5px #000000;
                         display: flex;
                         flex-direction: column;
                         padding: 10px;
+                    }
+                    @media (max-width: 600px){
+                        div {
+                            width: 95%;
+                        }
                     }
                     `}
                 </style>

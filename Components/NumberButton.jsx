@@ -1,4 +1,6 @@
 import React,{Component} from 'react'
+import {connect} from 'react-redux'
+import newNumber from '../store/actions/newNumber'
 
 class NumberButton extends Component {
     constructor(props){
@@ -6,10 +8,10 @@ class NumberButton extends Component {
     }
 
     render(){
-        const {number,area} = this.props
+        const {number,area,pushNewNumber} = this.props
         return (
             <div>
-                <input type="button" value={number}/>
+                <input type="button" value={number} onClick={() => pushNewNumber(number)}/>
                 <style jsx>
                     {`
                     div {
@@ -23,17 +25,17 @@ class NumberButton extends Component {
                         border: none;
                         border-radius: 10px;
                         outline: none;
-                        background-color: var(--trolley-grey);
-                        color: var(--platinum);
+                        background-color: #7c7c7c;
+                        color: #eee5e9;
                         font-size: 2em;
                         font-family: 'Orbitron', sans-serif;
                     }
                     input:hover {
-                        background-color: var(--cornflower-blue);
-                        color: var(--registration-black);
+                        background-color: #92dce5;
+                        color: #000000;
                     }
                     input:active {
-                        box-shadow: 5px 5px 5px var(--registration-black) inset;
+                        box-shadow: 5px 5px 5px #000000 inset;
                         position: relative;
                         margin-top: 3px;
                         margin-left: 3px;
@@ -45,4 +47,12 @@ class NumberButton extends Component {
     }
 }
 
-export default NumberButton
+const mapDispatchToProps = dispatch => {
+    return {
+        pushNewNumber: (number) => {
+            dispatch(newNumber(number))
+        }
+    }
+}
+
+export default connect(null,mapDispatchToProps)(NumberButton)

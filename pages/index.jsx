@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import Calculator from '../Components/Calculator.jsx'
 import Head from 'next/head'
+import store from '../store/store'
+import {Provider} from 'react-redux'
 
 class Home extends Component {
     constructor(props){
@@ -14,7 +16,9 @@ class Home extends Component {
                     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" />
                 </Head>
                 <h1>JavaScript Calculator</h1>
-                <Calculator />
+                <Provider store={store}>
+                    <Calculator />
+                </Provider>
                 <style jsx global>
                     {`
                     :root {
@@ -29,15 +33,20 @@ class Home extends Component {
                     h1 {
                         text-align: center;
                         font-family: 'Orbitron', sans-serif;
-                        color: var(--registration-black);
+                        color: #000000;
                         font-size: 3em;
                     }
                     body {
-                        background-color: var(--cornflower-blue);
+                        background-color: #92dce5;
                         height: 100%;
                     }
                     div {
                         height: 100%;
+                    }
+                    @media (max-width: 600px){
+                        h1 {
+                            font-size: 2em;
+                        }
                     }
                     `}
                 </style>

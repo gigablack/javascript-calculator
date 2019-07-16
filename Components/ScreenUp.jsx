@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {connect} from 'react-redux'
 
 class ScreenUp extends Component {
     constructor(props){
@@ -6,9 +7,10 @@ class ScreenUp extends Component {
     }
 
     render(){
+        const {screenOperation} = this.props
         return (
             <div>
-                <p>0</p>
+                <p>{screenOperation}</p>
                 <style>
                     {`
                     div {
@@ -16,7 +18,7 @@ class ScreenUp extends Component {
                     }
                     p {
                         font-size: 1em;
-                        color: var(--vermillion);
+                        color: #d64933;
                         margin-top: 25px;
                         margin-bottom: 0px;
                     }
@@ -27,4 +29,10 @@ class ScreenUp extends Component {
     }
 }
 
-export default ScreenUp
+const mapStateToProps = state => {
+    return {
+        screenOperation: state.screenUp
+    }
+}
+
+export default connect(mapStateToProps,null)(ScreenUp)
