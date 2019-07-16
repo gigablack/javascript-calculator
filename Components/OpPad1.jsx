@@ -7,7 +7,7 @@ class OpPad1 extends Component {
         this.state = {
             buttons: [
                 {
-                    operation: 'del',
+                    operation: 'C',
                     area: 'del'
                 },
                 {

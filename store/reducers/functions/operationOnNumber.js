@@ -3,7 +3,7 @@ import stringCalculator from 'string-calculator'
 const operationOnNumber = (state,operation) => {
     if(operation !== '='){
         // To do
-        if(operation == 'del'){
+        if(operation == 'C'){
             let newState = Object.assign({},state,{
                 screenDown: '0',
                 screenUp: '0',

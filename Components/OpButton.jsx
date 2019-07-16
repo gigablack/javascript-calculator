@@ -23,7 +23,7 @@ class OpButton extends Component {
                         border: none;
                         border-radius: 10px;
                         outline: none;
-                        background-color: ${operation == '=' || operation == 'del' ? 'hsl(8, 90%, 50%)' : '#d64933'};
+                        background-color: ${operation == '=' || operation == 'C' ? 'hsl(8, 90%, 50%)' : '#d64933'};
                         font-size: 2em;
                         font-family: 'Orbitron', sans-serif;
                     }
