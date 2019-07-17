@@ -55,7 +55,8 @@ const operationOnNumber = (state,operation) => {
         if(endInNumber){
             //To do
             let result = stringCalculator(state.screenUp+state.screenDown)
-            result = result.toString()
+            let dividendo = Math.floor(result)
+            result = result / dividendo === 1 ? result : result.toFixed(4).match(/\d+\.[1-9]+/).join('') 
             let newState = Object.assign({},state,{
                 screenDown: result,
                 screenUp: state.screenUp+state.screenDown,

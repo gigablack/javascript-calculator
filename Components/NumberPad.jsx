@@ -45,6 +45,10 @@ class NumberPad extends Component {
                 {
                     number: '0',
                     area: 'zero'
+                },
+                {
+                    number: '.',
+                    area: 'dot'
                 }
             ]
         }
@@ -68,7 +72,7 @@ class NumberPad extends Component {
                         "seven eight nine"
                         "four five six"
                         "one two three"
-                        "zero zero zero";
+                        "zero zero dot";
                     }
                     `}
                 </style>
